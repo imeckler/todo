@@ -1,0 +1,44 @@
+Name: Todo
+Version: 0.1
+Description: A todo list app
+Author: Izaak Meckler
+Maintainer: izaakmeckler@me.com
+Build-Type: Simple
+Cabal-Version: >= 1.2
+
+
+Executable todo
+  Main-is: Todo.hs
+  Build-depends:
+      base >= 4.0 && < 5.0
+    , time >= 1.4 && < 2
+    , old-locale >= 1 && < 1.1
+    , directory >= 1.1 && < 1.2
+    , split >= 0.2 && < 1
+
+  extensions: 
+  ghc-options: -O2
+  other-modules:
+    Utils
+    Common
+
+Executable todoemail
+  Main-is: Watcher.hs
+  Build-depends:
+      base >= 4.0 && < 5.0
+    , time >= 1.4 && < 2
+    , old-locale >= 1 && < 1.1
+    , directory >= 1.1 && < 1.2
+    , split >= 0.2 && < 1
+    , smtp-mail >= 0.1 && < 1
+    , mime-mail >= 0.4 && < 1
+    , text      >= 0.11 && < 1
+    , network   >= 2.4 && < 3
+    , bytestring >= 0.9
+    , random >= 1
+
+  extensions: 
+  ghc-options: -O2
+  other-modules:
+    Utils
+    Common
